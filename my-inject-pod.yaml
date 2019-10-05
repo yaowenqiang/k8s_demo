@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: my-inject-pod
+spec:
+    containers:
+        - name: inject-app
+          image: nginx
+          volumeMounts:
+              - name: config
+                mountPath: /etc/config
+    volumes:
+        - name: config
+          configMap:
+              name: my-inject-configmap
+

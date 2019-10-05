@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: my-inject-configmap
+data:
+    config.ini: |
+        some_variable1 = foll
+        some_other_variable: = baz
+    database.ini: |
+        uri = mongodb://my-database:27017/
+
